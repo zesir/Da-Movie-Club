@@ -12,7 +12,6 @@ const MyButton = ({ children, ...props }: MyButtonProps) => {
       color="primary"
       sx={{
         borderRadius: 2,
-
         fontWeight: 600,
       }}
       {...props}

@@ -1,22 +1,15 @@
-import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import theme from "@/theme/theme";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App.tsx";
-import "./index.css";
+import "./index.css"; // ou main.css selon ton projet
 
-const theme = createTheme({
-  palette: {
-    mode: "dark", // ou "dark"
-    primary: {
-      main: "#1976d2", // bleu
-    },
-    secondary: {
-      main: "#dc004e", // rose
-    },
-  },
-});
 createRoot(document.getElementById("root")!).render(
   <ThemeProvider theme={theme}>
-    <CssBaseline /> {/* Reset CSS de Material UI */}
-    <App />
+    <CssBaseline />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </ThemeProvider>,
 );

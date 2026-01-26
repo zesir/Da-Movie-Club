@@ -4,13 +4,18 @@
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ],
-
   "compilerOptions": {
-    "moduleResolution": "bundler",
-    "types": ["vite/client"],
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es2015",
+
+    "types": ["vite/client", "node"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "strict": true,
+    "skipLibCheck": true, // ← permet d'ignorer certains types MUI
+    "esModuleInterop": true
   }
 }

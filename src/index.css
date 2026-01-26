@@ -1,0 +1,20 @@
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.swiper-slide {
+  border-radius: 16px; /* ou selon ton thème */
+  overflow: hidden;
+}
+.swiper-scrollbar {
+  background: rgba(255, 255, 255, 0.2); /* fond de la scrollbar */
+  border-radius: 4px;
+  height: 8px; /* épaisseur */
+}
+
+/* "Thumb" draggable */
+.swiper-scrollbar-drag {
+  background: #1976d2; /* couleur de la barre */
+  border-radius: 4px;
+}
